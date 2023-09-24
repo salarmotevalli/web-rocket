@@ -1,9 +1,15 @@
 #[macro_use]
 extern crate rocket;
+extern crate diesel;
+#[macro_use]
+extern crate rocket_sync_db_pools;
 
 use rocket::serde::json::{json, Value};
 
 mod auth;
+
+#[database("sqlite")]
+struct DbConn(diesel::SqliteConnection);
 
 #[get("/secrete")]
 fn secrete(_auth: auth::BasicAuth) -> Value {
