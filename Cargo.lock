@@ -1476,6 +1476,7 @@ dependencies = [
  "diesel",
  "rocket",
  "rocket_sync_db_pools",
+ "serde",
  "serde_json",
 ]
 

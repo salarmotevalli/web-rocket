@@ -2,7 +2,7 @@
 
 diesel::table! {
     users (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         name -> Text,
         email -> Text,
         created_at -> Timestamp,
